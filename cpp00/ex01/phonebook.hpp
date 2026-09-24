@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grhaddad <grhaddad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/22 16:01:26 by grhaddad          #+#    #+#             */
-/*   Updated: 2026/09/24 13:10:11 by grhaddad         ###   ########.fr       */
+/*   Created: 2026/09/24 17:05:45 by grhaddad          #+#    #+#             */
+/*   Updated: 2026/09/24 17:17:13 by grhaddad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cctype>
+#ifndef PHONEBOOK_HPP
+#define PHONEBOOK_HPP
 
-int main(int ac, char **av)
+#include "contact.hpp"
+
+class PhoneBook
 {
-	if (ac < 2) {
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	} else {
-		for (int i = 1; i < ac; ++i) {
-			for (int j = 0; av[i][j] != '\0'; ++j) {
-				std::cout << static_cast<char>(std::toupper(av[i][j]));
-			}
-		}
-		std::cout << std::endl;
-	}
-	return 0;
-}
+	private:
+		Contact contacts[8];
+		int currentIndex;
+		int contactCount;
+	public:
+		PhoneBook();
+		void addContact();
+		void searchContact() const;
+};
+
+#endif
