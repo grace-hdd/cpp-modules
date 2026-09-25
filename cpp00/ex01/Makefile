@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: grhaddad <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: grhaddad <grhaddad@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/24 14:15:53 by grhaddad          #+#    #+#              #
-#    Updated: 2026/09/24 14:16:46 by grhaddad         ###   ########.fr        #
+#    Updated: 2026/09/25 15:54:22 by grhaddad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME	:= phonebook
 CXX		:= c++
 CXXFLAGS	:= -Wall -Werror -Wextra -std=c++98
 
-SRC		:= phonebook.cpp
+SRC		:= main.cpp phonebook.cpp contact.cpp 
 OBJS	:= $(SRC:.cpp=.o)
 
 all:	$(NAME)
@@ -22,7 +22,7 @@ all:	$(NAME)
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 	
-$(OBJS)/%.o: $(SRC)/%.cpp
+%.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
