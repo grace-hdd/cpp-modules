@@ -6,10 +6,11 @@
 /*   By: grhaddad <grhaddad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/24 16:02:13 by grhaddad          #+#    #+#             */
-/*   Updated: 2026/09/24 17:17:51 by grhaddad         ###   ########.fr       */
+/*   Updated: 2026/09/25 16:42:15 by grhaddad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
 
