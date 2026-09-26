@@ -6,7 +6,7 @@
 #    By: grhaddad <grhaddad@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/25 16:39:50 by grhaddad          #+#    #+#              #
-#    Updated: 2026/09/25 16:40:31 by grhaddad         ###   ########.fr        #
+#    Updated: 2026/09/26 10:21:35 by grhaddad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME	:= account
 CXX		:= c++
 CXXFLAGS	:= -Wall -Werror -Wextra -std=c++98
 
-SRC		:= Account.cpp test.cpp 
+SRC		:= Account.cpp tests.cpp 
 OBJS	:= $(SRC:.cpp=.o)
 
 all:	$(NAME)
